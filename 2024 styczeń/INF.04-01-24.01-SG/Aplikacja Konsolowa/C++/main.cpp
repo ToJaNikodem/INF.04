@@ -2,10 +2,10 @@
 
 using namespace std;
 
-string plec(int PESEL[])
+string sexFinder(int PESEL[])
 {
-    int plec_p = PESEL[9];
-    if (plec_p % 2 == 0)
+    int sexPosition = PESEL[9];
+    if (sexPosition % 2 == 0)
     {
         return "k";
     }
@@ -15,7 +15,7 @@ string plec(int PESEL[])
     }
 }
 
-bool sum_kontr(int PESEL[])
+bool controlSum(int PESEL[])
 {
     int suma = 0;
     int j = 1;
@@ -69,17 +69,17 @@ int main()
     cout << "Podaj pesel: " << endl;
     cin >> pesel;
 
-    int pesel_array[11];
+    int peselArray[11];
 
     for (int i = 0; i < pesel.length(); i++)
     {
-        pesel_array[i] = pesel.at(i) - '0';
+        peselArray[i] = pesel.at(i) - '0';
     }
 
-    string sex = plec(pesel_array);
+    string sex = sexFinder(peselArray);
     cout << "Płeć: " << sex << endl;
 
-    bool suma = sum_kontr(pesel_array);
+    bool suma = controlSum(peselArray);
     cout << "Suma kontrolna: " << suma << endl;
 
     return 0;

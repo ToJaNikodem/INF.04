@@ -31,7 +31,7 @@ public:
     int calculatePoints(int numberOfDice)
     {
         int points = 0;
-        bool isRepeting = false;
+        bool isRepeating = false;
 
         for (int i = 0; i < numberOfDice; i++)
         {
@@ -40,14 +40,14 @@ public:
                 if (randomNumbers[i] == randomNumbers[j] && i != j)
                 {
                     points += randomNumbers[j];
-                    isRepeting = true;
+                    isRepeating = true;
                     randomNumbers[j] = 0;
                 }
             }
-            if (isRepeting == true)
+            if (isRepeating == true)
             {
                 points += randomNumbers[i];
-                isRepeting = false;
+                isRepeating = false;
             }
         }
         return points;
