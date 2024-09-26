@@ -4,8 +4,8 @@ using namespace std;
 
 string sexFinder(int PESEL[])
 {
-    int sexPosition = PESEL[9];
-    if (sexPosition % 2 == 0)
+    int sexNumberPosition = PESEL[9];
+    if (sexNumberPosition % 2 == 0)
     {
         return "k";
     }
@@ -17,31 +17,31 @@ string sexFinder(int PESEL[])
 
 bool controlSum(int PESEL[])
 {
-    int suma = 0;
+    int sum = 0;
     int j = 1;
     for (int i = 0; i < 10; i++)
     {
         if (j == 1)
         {
-            suma += PESEL[i] * 1;
+            sum += PESEL[i] * 1;
         }
         else if (j == 2)
         {
-            suma += PESEL[i] * 3;
+            sum += PESEL[i] * 3;
         }
         else if (j == 3)
         {
-            suma += PESEL[i] * 7;
+            sum += PESEL[i] * 7;
         }
         else if (j == 4)
         {
-            suma += PESEL[i] * 9;
+            sum += PESEL[i] * 9;
             j = 0;
         }
         j++;
     }
 
-    int m = suma % 10;
+    int m = sum % 10;
     int r;
 
     if (m == 0)
@@ -79,8 +79,8 @@ int main()
     string sex = sexFinder(peselArray);
     cout << "Płeć: " << sex << endl;
 
-    bool suma = controlSum(peselArray);
-    cout << "Suma kontrolna: " << suma << endl;
+    bool sum = controlSum(peselArray);
+    cout << "Suma kontrolna: " << sum << endl;
 
     return 0;
 }
