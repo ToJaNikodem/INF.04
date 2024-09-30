@@ -44,7 +44,7 @@ int main()
     cout << "Podaj treść notatki: ";
     cin >> newNoteText;
 
-    Note note1(newNoteText, newNoteTitle);
+    Note note1(newNoteTitle, newNoteText);
 
     note1.displayNote();
     note1.debug();
@@ -55,7 +55,7 @@ int main()
     cout << "Podaj treść notatki: ";
     cin >> newNoteText;
 
-    Note note2(newNoteText, newNoteTitle);
+    Note note2(newNoteTitle, newNoteText);
 
     note2.displayNote();
     note2.debug();
