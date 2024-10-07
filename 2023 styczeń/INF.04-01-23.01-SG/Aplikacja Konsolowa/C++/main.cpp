@@ -2,6 +2,22 @@
 
 using namespace std;
 
+int findGCM(int a, int b)
+{
+    while (a != b)
+    {
+        if (a > b)
+        {
+            a = a - b;
+        }
+        else
+        {
+            b = b - a;
+        }
+    }
+    return a;
+}
+
 int main()
 {
     int a, b;
@@ -17,19 +33,9 @@ int main()
         cout << "Niepoprawne liczby!" << endl;
     }
 
-    while (a != b)
-    {
-        if (a > b)
-        {
-            a = a - b;
-        }
-        else
-        {
-            b = b - a;
-        }
-    }
+    int result = findGCM(a, b);
 
-    cout << "Największy wspóly dzielnik: " << a << endl;
+    cout << "Największy wspóly dzielnik: " << result << endl;
 
     return 0;
 }
