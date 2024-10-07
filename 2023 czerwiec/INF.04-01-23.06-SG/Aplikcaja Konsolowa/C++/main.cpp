@@ -29,12 +29,13 @@ int main()
         }
     }
 
-    cout << "Liczby pierwsze: " << endl;
+    cout << "Liczby pierwsze: ";
 
     for (int i = 0; i < 99; i++)
     {
-        if (numbers[i] != 0) {
-            cout << numbers[i] << endl;
+        if (numbers[i] != 0)
+        {
+            cout << numbers[i] << ", ";
         }
     }
 

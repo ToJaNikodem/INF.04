@@ -1,9 +1,9 @@
 def sexFinder(PESEL):
     sexNumberPosition = int(PESEL[9])
     if sexNumberPosition % 2 == 0:
-        return "k"
+        return "K"
     else:
-        return "m"
+        return "M"
 
 
 def controlSum(PESEL):
@@ -25,9 +25,6 @@ def controlSum(PESEL):
     r = 0
     if m != 0:
         r = 10 - m
-    print(sum)
-    print(r)
-    print(m)
     if r == int(PESEL[10]):
         return True
     else:
@@ -37,7 +34,11 @@ pesel = input("Podaj pesel: ")
 peselArray = []
 
 sex = sexFinder(pesel)
-print("Płeć: ", sex)
+print("Płeć:", sex)
 
 sum = controlSum(pesel)
-print("Suma kontrolna: ", sum)
+if sum:
+    print("Suma kontrolna poprawna!")
+else:
+    print("Suma kontrolna niepoprawna!")
+    

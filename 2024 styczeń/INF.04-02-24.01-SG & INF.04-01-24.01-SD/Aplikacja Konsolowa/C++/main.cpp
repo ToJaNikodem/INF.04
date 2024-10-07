@@ -46,11 +46,8 @@ int main()
     cout << "Podaj napis: ";
     getline(cin, text);
 
-
-    StringTools newStringTools;
-
-    int vowelCount = newStringTools.vowelCounter(text);
-    string newText = newStringTools.repetitionDeleter(text);
+    int vowelCount = StringTools::vowelCounter(text);
+    string newText = StringTools::repetitionDeleter(text);
 
     cout << "Liczba samogłosek: " << vowelCount << endl;
     cout << "Napis po usunięciu powtórzeń: " << newText << endl;

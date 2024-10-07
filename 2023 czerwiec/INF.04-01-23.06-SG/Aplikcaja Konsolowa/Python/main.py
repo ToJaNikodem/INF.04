@@ -17,4 +17,4 @@ print("Liczby pierwsze:")
 
 for i in range(99):
     if numbers[i] != 0:
-        print(numbers[i])
+        print(numbers[i], ", ", sep="", end="")

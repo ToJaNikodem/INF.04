@@ -2,16 +2,16 @@
 
 using namespace std;
 
-string sexFinder(int PESEL[])
+char sexFinder(int PESEL[])
 {
     int sexNumberPosition = PESEL[9];
     if (sexNumberPosition % 2 == 0)
     {
-        return "k";
+        return 'K';
     }
     else
     {
-        return "m";
+        return 'M';
     }
 }
 
@@ -66,7 +66,7 @@ bool controlSum(int PESEL[])
 int main()
 {
     string pesel;
-    cout << "Podaj pesel: " << endl;
+    cout << "Podaj pesel: ";
     cin >> pesel;
 
     int peselArray[11];
@@ -76,11 +76,18 @@ int main()
         peselArray[i] = pesel.at(i) - '0';
     }
 
-    string sex = sexFinder(peselArray);
+    char sex = sexFinder(peselArray);
     cout << "Płeć: " << sex << endl;
 
     bool sum = controlSum(peselArray);
-    cout << "Suma kontrolna: " << sum << endl;
+    if (sum)
+    {
+        cout << "Suma kontrolna poprawna!";
+    }
+    else
+    {
+        cout << "Suma kontrolna niepoprawna!";
+    }
 
     return 0;
 }
