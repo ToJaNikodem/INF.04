@@ -2,13 +2,13 @@ class Osoba:
     count = 0
     
     def __init__(self, id = 1, name = ""):
-        self.id = id
-        self.name = name
+        self.__id = id
+        self.__name = name
         Osoba.count += 1
         
     def showName(self, othername):
-        if (self.name != ""):
-            print("Cześć ", othername, ", mam na imię ", self.name, sep="")
+        if (self.__name != ""):
+            print("Cześć ", othername, ", mam na imię ", self.__name, sep="")
         else:
             print("Brak danych!")
         

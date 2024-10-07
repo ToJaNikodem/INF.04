@@ -47,8 +47,11 @@ int Osoba::count = 0;
 
 int main()
 {
-    Osoba *newOsoba = new Osoba(1, "Kamil");
-    newOsoba->showName("Nikodem");
+    Osoba *osoba1 = new Osoba();
+    osoba1->showName("Nikodem");
+
+    Osoba *osoba2 = new Osoba(1, "Kamil");
+    osoba2->showName("Nikodem");
 
     return 0;
 }
