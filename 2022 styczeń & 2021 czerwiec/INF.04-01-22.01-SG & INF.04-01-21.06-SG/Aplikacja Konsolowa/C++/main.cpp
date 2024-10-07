@@ -7,18 +7,17 @@ class arraySorter
 public:
     int numbers[10];
 
-    void inputer()
+    void arrayInputer()
     {
         cout << "Podaj tablicę" << endl;
         for (int i = 0; i < 10; i++)
         {
-            cout << "Wprowadź element " << i << ": ";
+            cout << "Wprowadź element " << i + 1 << ": ";
             cin >> numbers[i];
         }
     }
 
-    // function returns number when tactic = 0 and returns index when tactic = 1
-    int sortAndFindMax(int tactic)
+    void sortArray()
     {
         int index;
 
@@ -27,19 +26,35 @@ public:
             index = i;
             for (int j = i + 1; j < 10; j++)
             {
-                if (numbers[j] < numbers[index])
+                if (numbers[j] > numbers[index])
                 {
                     index = j;
                 }
-
-                swap(numbers[index], numbers[i]);
             }
+            swap(numbers[index], numbers[i]);
         }
+    }
+
+    // function returns number when tactic = 0 and returns index when tactic = 1
+    int sortArrayAndFindMax(int tactic)
+    {
+        sortArray();
 
         return findMax(tactic);
     }
 
+    void printArray()
+    {
+        cout << "Tablica: ";
+
+        for (int i = 0; i < 10; i++)
+        {
+            cout << numbers[i] << ", ";
+        }
+    }
+
 private:
+    // function returns number when tactic = 0 and returns index when tactic = 1
     int findMax(int tactic)
     {
         int max = numbers[0];
@@ -61,6 +76,7 @@ private:
         {
             return maxIndex;
         }
+        return -1;
     }
 };
 
@@ -70,14 +86,19 @@ int main()
 
     int tactic = 0;
 
-    newArraySorter.inputer();
-    int max = newArraySorter.sortAndFindMax(tactic);
+    newArraySorter.arrayInputer();
+    int max = newArraySorter.sortArrayAndFindMax(tactic);
 
-    if (tactic == 0) {
-        cout << "Największa wartość w tablicy to: " << max;
-    } else if (tactic == 1) {
-        cout << "Index największego elementu w tablicy to: " << max;
+    if (tactic == 0)
+    {
+        cout << "Największa wartość w tablicy to: " << max << endl;
     }
+    else if (tactic == 1)
+    {
+        cout << "Index największego elementu w tablicy to: " << max << endl;
+    }
+
+    newArraySorter.printArray();
 
     return 0;
 }

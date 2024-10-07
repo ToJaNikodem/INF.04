@@ -35,11 +35,11 @@ int main()
     Film film1;
 
     cout << "Tytuł: " << film1.titleGetter() << endl;
-    cout << "LIczba wypożyczeń: " << film1.loanCountGetter() << endl;
+    cout << "Liczba wypożyczeń: " << film1.loanCountGetter() << endl;
 
     film1.titleSetter("Harry Poter");
     film1.loanCountIncrementer();
 
     cout << "Tytuł: " << film1.titleGetter() << endl;
-    cout << "LIczba wypożyczeń: " << film1.loanCountGetter() << endl;
+    cout << "Liczba wypożyczeń: " << film1.loanCountGetter() << endl;
 }
