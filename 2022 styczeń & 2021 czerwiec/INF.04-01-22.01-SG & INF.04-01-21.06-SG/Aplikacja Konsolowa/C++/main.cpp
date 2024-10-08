@@ -17,6 +17,12 @@ public:
         }
     }
 
+    /*
+        * nazwa funkcji: sortArray
+        * parametry wejściowe: brak
+        * wartość zwracana: brak
+        * autor: 00000000000
+    */
     void sortArray()
     {
         int index;
@@ -35,7 +41,6 @@ public:
         }
     }
 
-    // function returns number when tactic = 0 and returns index when tactic = 1
     int sortArrayAndFindMax(int tactic)
     {
         sortArray();
@@ -54,7 +59,12 @@ public:
     }
 
 private:
-    // function returns number when tactic = 0 and returns index when tactic = 1
+    /*
+        * nazwa funkcji: findMax
+        * parametry wejściowe: tactic - parametr wybierający taktykę
+        * wartość zwracana: dla taktyki 0 zwraca wartość maksymalną, a dla taktyki 1 zwraca indeks wartości maksymalne
+        * autor: 00000000000
+    */
     int findMax(int tactic)
     {
         int max = numbers[0];

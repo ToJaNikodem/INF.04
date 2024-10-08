@@ -8,7 +8,6 @@ class arraySorter:
             print("Wprowadź element ", i+1, ": ", end="", sep="")
             self.numbers.append(int(input()))
 
-    # tactic = 0 - metoda zwraca największy element, tactic = 1 - metoda zwraca indeks największego elementu
     def sortArrayAndFindMax(self, tactic):
         self.__sortArray()
         return self.__findMax(tactic)
@@ -16,7 +15,12 @@ class arraySorter:
     def printArray(self):
         print("Tablica:", self.numbers)
 
-    # tactic = 0 - metoda zwraca największy element, tactic = 1 - metoda zwraca indeks największego elementu
+    """
+        * nazwa funkcji: findMax
+        * parametry wejściowe: tactic - parametr wybierający taktykę
+        * wartość zwracana: dla taktyki 0 zwraca wartość maksymalną, a dla taktyki 1 zwraca indeks wartości maksymalne
+        * autor: 00000000000
+    """
     def __findMax(self, tactic):
         max = self.numbers[0]
         maxIndex = 0
@@ -31,7 +35,13 @@ class arraySorter:
         elif (tactic == 1):
             return maxIndex
 
-    def __sortArray(self):
+    """
+        * nazwa funkcji: sortArray
+        * parametry wejściowe: brak
+        * wartość zwracana: brak
+        * autor: 00000000000
+    """
+    def sortArray(self):
         for i in range(10):
             index = i
             for j in range(i + 1, 10):
