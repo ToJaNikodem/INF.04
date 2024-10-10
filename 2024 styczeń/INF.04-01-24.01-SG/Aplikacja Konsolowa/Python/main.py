@@ -1,10 +1,16 @@
+"""
+    nazwa funkcji: sexFinder
+    opis funkcji: funckja sprawdza czy podany pesel należy do kobiety czy do mężczyzny
+    parametry: PESEL - pesel do sprawdzenia
+    zwracany typ i opis: fukcja zwraca znak "K" dla kobiety lub znak "M" dla mężczyzny
+    autor: 00000000000
+"""
 def sexFinder(PESEL):
     sexNumberPosition = int(PESEL[9])
     if sexNumberPosition % 2 == 0:
         return "K"
     else:
         return "M"
-
 
 def controlSum(PESEL):
     sum = 0

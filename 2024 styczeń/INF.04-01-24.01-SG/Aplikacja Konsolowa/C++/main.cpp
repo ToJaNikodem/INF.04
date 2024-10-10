@@ -2,6 +2,13 @@
 
 using namespace std;
 
+/*
+    * nazwa funkcji: sexFinder
+    * opis funkcji: funckja sprawdza czy podany pesel należy do kobiety czy do mężczyzny
+    * parametry: PESEL - pesel do sprawdzenia
+    * zwracany typ i opis: fukcja zwraca znak "K" dla kobiety lub znak "M" dla mężczyzny
+    * autor: 00000000000
+*/
 char sexFinder(int PESEL[])
 {
     int sexNumberPosition = PESEL[9];

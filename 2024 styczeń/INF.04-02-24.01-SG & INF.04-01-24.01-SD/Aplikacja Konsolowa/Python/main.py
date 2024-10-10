@@ -1,3 +1,10 @@
+"""
+    klasa: StringTools
+    opis: klasa representuje zestaw narzędzi do napisów
+    metody: vowelCounter - zwraca ilość samogłosek w napisie
+            repetitionDeleter - zwraca napis z usuniętymi powtórzeniami znaków obok siebie
+    autor: 00000000000
+"""
 class StringTools:
     @staticmethod
     def vowelCounter(text):
