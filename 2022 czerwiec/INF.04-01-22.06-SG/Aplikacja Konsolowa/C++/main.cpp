@@ -15,6 +15,14 @@ void addNumbers(int numbers[])
     }
 }
 
+/*
+    * nazwa funkcji: lookFor
+    * argumenty: number - szukana liczba
+    *            numbers - przeszukiwana tablica
+    * typ zwracany: int, indeks szukanej liczby w tablicy albo 100 w przypadku nie znalezienia liczby
+    * informacje: <opis>
+    * autor: 00000000000
+*/
 int lookFor(int number, int numbers[])
 {
     int i = 0;
