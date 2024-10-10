@@ -4,6 +4,13 @@ class DiceThrow:
     def __init__(self):
         self.randomNumbers = {}
 
+    """
+        nazwa: displayRandomNumbers
+        opis: wypisuje wylosowane kostki
+        parametry: numberOfDice - ilość kości do wyświetlenia
+        zwracany typ i opis: brak
+        autor: 00000000000
+    """
     def displayRandomNumbers(self, numberOfDice):
         for i in range(numberOfDice):
             print("Kostka ", i + 1, ": ", self.randomNumbers[i], sep="")

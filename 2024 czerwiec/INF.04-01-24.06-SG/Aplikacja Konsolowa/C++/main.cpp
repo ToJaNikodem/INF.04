@@ -8,6 +8,13 @@ class DiceThrow
 public:
     int randomNumbers[10];
 
+    /*
+        * nazwa: displayRandomNumbers
+        * opis: wypisuje wylosowane kostki
+        * parametry: numberOfDice - ilość kości do wyświetlenia
+        * zwracany typ i opis: brak
+        * autor: 00000000000
+    */
     void displayRandomNumbers(int numberOfDice)
     {
         for (int i = 0; i < numberOfDice; i++)

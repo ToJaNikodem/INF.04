@@ -16,10 +16,10 @@ class arraySorter:
         print("Tablica:", self.numbers)
 
     """
-        * nazwa funkcji: findMax
-        * parametry wejściowe: tactic - parametr wybierający taktykę
-        * wartość zwracana: dla taktyki 0 zwraca wartość maksymalną, a dla taktyki 1 zwraca indeks wartości maksymalne
-        * autor: 00000000000
+        nazwa funkcji: findMax
+        parametry wejściowe: tactic - parametr wybierający taktykę
+        wartość zwracana: dla taktyki 0 zwraca wartość maksymalną, a dla taktyki 1 zwraca indeks wartości maksymalne
+        autor: 00000000000
     """
     def __findMax(self, tactic):
         max = self.numbers[0]

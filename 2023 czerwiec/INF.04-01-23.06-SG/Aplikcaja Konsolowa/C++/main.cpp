@@ -3,6 +3,13 @@
 
 using namespace std;
 
+/*
+    * nazwa funkcji: addNumbers
+    * parametry wejściowe: numbers - tablica do której zostaną dodane liczby
+    * wartość zwracana: brak
+    * informacje: funkcja dodająca liczby do tablicy
+    * autor: 00000000000
+*/
 void addNumbers(int numbers[])
 {
     for (int i = 2; i <= 100; i++)

@@ -1,5 +1,12 @@
 import math
 
+"""
+    nazwa funkcji: addNumbers
+    parametry wejściowe: numbers - tablica do której zostaną dodane liczby
+    wartość zwracana: brak
+    informacje: funkcja dodająca liczby do tablicy
+    autor: 00000000000
+"""
 def addNumbers(numbers):
     for i in range(2, 101):
         numbers.append(i)

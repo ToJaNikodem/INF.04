@@ -1,7 +1,14 @@
 #include <iostream>
 
 using namespace std;
-
+/*
+    * nazwa funkcji: findGCM
+    * opis funkcji: oblicza największy wspólny dzielnik
+    * parametry: a – pierwsza liczba
+    *           b – druga liczba
+    * zwracany typ i opis: największy wspólny dzielnik podanych liczb
+    * autor: 00000000000
+*/
 int findGCM(int a, int b)
 {
     while (a != b)

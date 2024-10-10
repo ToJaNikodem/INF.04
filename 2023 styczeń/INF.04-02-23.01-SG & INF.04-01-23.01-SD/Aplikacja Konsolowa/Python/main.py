@@ -1,3 +1,12 @@
+"""
+    klasa: Note
+    opis: klasa opisująca notatkę
+    pola: count - statyczne pole przechowujące ilośc notatek
+          identifier - identyfikator notatki
+          title - tytuł notatki
+          text - treść notatki
+    autor: 00000000000
+"""
 class Note:
     count = 0
     

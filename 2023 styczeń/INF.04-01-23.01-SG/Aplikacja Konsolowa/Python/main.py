@@ -1,3 +1,11 @@
+"""
+    nazwa funkcji: findGCM
+    opis funkcji: oblicza największy wspólny dzielnik
+    parametry: a – pierwsza liczba
+               b – druga liczba
+    zwracany typ i opis: największy wspólny dzielnik podanych liczb
+    autor: 00000000000
+"""
 def findGCM(a, b):
     while a != b:
         if a > b:

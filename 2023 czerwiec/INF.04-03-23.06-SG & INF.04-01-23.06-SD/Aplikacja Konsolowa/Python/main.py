@@ -1,3 +1,14 @@
+"""
+    nazwa klasy: Film
+    pola: title - przechowuje tytuł filmu
+    loanCount - ilość wypożyczonych filmów
+    metody: titleSetter, brak zwracanej wartości – ustawia tytuł filmu na podany
+            titleGetter, zwraca nazwę filmu - zwraca nazwę filmu
+            loanCountGetter, zwraca ilość wypożyczonych filmów - zwraca ilość wypożyczonych filmów
+            loanCountIncrementer, brak zwracanej wartości - inkrementuje ilośc wypożyczonych filmów 
+    informacje: klasa opisująca film
+    autor: 00000000000
+"""
 class Film:
     def __init__(self):
         self._title = ""
