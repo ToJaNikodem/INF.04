@@ -25,8 +25,10 @@ public:
         count++;
     }
 
-    Osoba(const Osoba &other)
+    Osoba(const Osoba &otherPerson)
     {
+        id = otherPerson.id;
+        name = otherPerson.name;
         count++;
     }
 
@@ -47,11 +49,26 @@ int Osoba::count = 0;
 
 int main()
 {
-    Osoba *osoba1 = new Osoba();
-    osoba1->showName("Nikodem");
+    cout << "Liczba zarejestrowanych osób to: " << Osoba::count << endl;
 
-    Osoba *osoba2 = new Osoba(1, "Kamil");
-    osoba2->showName("Nikodem");
+    Osoba osoba1;
+
+    int id;
+    string name;
+
+    cout << "Podaj id osoby: ";
+    cin >> id;
+    cout << "Podaj imię osoby: ";
+    cin >> name;
+
+    Osoba osoba2(id, name);
+    Osoba osoba3 = osoba2;
+
+    osoba1.showName("Jan");
+    osoba2.showName("Jan");
+    osoba3.showName("Jan");
+
+    cout << "Liczba zarejestrowanych osób to: " << Osoba::count << endl;
 
     return 0;
 }
