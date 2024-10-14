@@ -8,12 +8,15 @@ def sorter(numbers):
 
 numbers = {}
 
+print("Tablica przed sortowaniem: ")
+
 for i in range(100):
-    numbers[i] = random.randrange(1, 100)
+    numbers[i] = random.randrange(1, 1000)
+    print(numbers[i], ", ", end="", sep="")
     
 sorter(numbers)
 
-print("Posortowana tablica: ")
+print("\nPosortowana tablica: ")
 
 for i in range(100):
     print(numbers[i], ", ", end="", sep="")

@@ -25,18 +25,21 @@ int main()
 {
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> distr(1, 100);
+    uniform_int_distribution<> distr(1, 1000);
 
     int numbers[100];
+
+    cout << "Tablica przed sortowaniem: " << endl; 
 
     for (int i = 0; i < 100; i++)
     {
         numbers[i] = distr(gen);
+        cout << numbers[i] << ", ";
     }
 
     sorter(numbers);
 
-    cout << "Posortowana tablica: " << endl;
+    cout << endl << "Posortowana tablica: " << endl;
 
     for (int i = 0; i < 100; i++)
     {
