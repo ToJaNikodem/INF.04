@@ -1,8 +1,8 @@
-import Component from './component';
+import Component from './Component';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
-  return <Component></Component>
+  return <Component />
 }
 
 export default App;
